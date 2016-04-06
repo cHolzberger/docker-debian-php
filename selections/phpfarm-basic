@@ -1,0 +1,17 @@
+apache2
+apache2-mpm-prefork
+git
+build-essential
+wget
+pkg-config 
+curl
+libapache2-mod-fcgid
+fontconfig 
+libxrender1
+xfonts-base
+xfonts-75dpi
+libssl1.0.0
+libssl1.0.0-dbg
+imagemagick
+xvfb
+lemon
