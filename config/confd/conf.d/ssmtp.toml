@@ -1,0 +1,10 @@
+[template]
+src = "ssmtp.conf"
+dest = /etc/ssmtp/ssmtp.conf
+
+keys = [
+	"/ssmtp/root",
+	"/ssmtp/mailhub",
+	"/ssmtp/hostname",
+	"/ssmtp/FromLineOverride"
+]

@@ -11,7 +11,7 @@ mkdir -p "$etcbasedir"
 
 configoptions="$configoptions \
 		--with-config-file-path=$etcbasedir
-		--with-config-file-scan-dir=$etcbasedir/conf.d
+		--with-config-file-scan-dir=/etc/php/conf.d
     --enable-fastcgi \
     --enable-fpm \
     --with-bz2 \

@@ -22,8 +22,8 @@ RUN begin-apt && \
 		end-apt
 
 # wkhtmltopdf offical binary
-ENV WKHTMLTOPDF_URL="https://bitbucket.org/wkhtmltopdf/wkhtmltopdf/downloads/wkhtmltox-0.13.0-alpha-7b36694_linux-jessie-amd64.deb"
-RUN wget --no-check-certificate $WKHTMLTOPDF_URL -O /tmp/wkhtmltox.deb && dpkg -i /tmp/wkhtmltox.deb && rm /tmp/wkhtmltox.deb
+COPY /pkg/ /tmp/
+RUN dpkg -i /tmp/wkhtmltox-0.13.0-alpha-7b36694_linux-jessie-amd64.deb && rm /tmp/wkhtmltox-0.13.0-alpha-7b36694_linux-jessie-amd64.deb
 
 RUN wget https://files.phpmyadmin.net/phpMyAdmin/$PHPMYADMIN_VERSION/phpMyAdmin-$PHPMYADMIN_VERSION-all-languages.tar.gz -O /tmp/phpmyadmin.tar.gz \
 && cd /opt \

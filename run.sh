@@ -1,5 +1,7 @@
 #/bin/sh
 
+confd -onetime -backend env 
+
 # is a certain UID wanted?
 if [ ! -z "$APACHE_UID" ]; then
     useradd --home /var/www --gid www-data -M -N --uid $APACHE_UID www-data
