@@ -1,0 +1,7 @@
+[template]
+src = "apache-php-site.conf.tmpl"
+dest = "/etc/apache2/sites-enabled/php.conf"
+
+keys = [
+	"/apache/fcgi/timeout"
+]

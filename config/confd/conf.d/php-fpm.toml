@@ -1,0 +1,10 @@
+[template]
+src = "php-fpm-www.ini.tmpl"
+dest = "/etc/php/fpm.d/www.ini"
+
+keys = [
+	 "/php/fpm/max/children",
+	 "/php/fpm/start/servers",
+	"/php/fpm/min/spare/servers",
+	"/php/fpm/max/spare/servers"
+]

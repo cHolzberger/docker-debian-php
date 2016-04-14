@@ -1,0 +1,7 @@
+[template]
+src = "apache-phpfarm.conf.tmpl"
+dest = "/etc/apache2/conf-enabled/phpfarm.conf"
+
+keys = [
+	"/apache/trustedproxy"
+]

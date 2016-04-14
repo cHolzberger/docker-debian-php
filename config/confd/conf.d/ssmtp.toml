@@ -1,10 +1,12 @@
 [template]
-src = "ssmtp.conf"
-dest = /etc/ssmtp/ssmtp.conf
+src = "ssmtp.conf.tmpl"
+dest = "/etc/ssmtp/ssmtp.conf"
 
 keys = [
 	"/ssmtp/root",
 	"/ssmtp/mailhub",
 	"/ssmtp/hostname",
-	"/ssmtp/FromLineOverride"
+	"/ssmtp/fromlineoverride",
+	"/ssmtp/authuser",
+	"/ssmtp/authpass"
 ]

@@ -1,13 +1,17 @@
 [template]
-src = "php-base.ini"
+src = "php-base.ini.tmpl"
 dest = "/etc/php/conf.d/php-base.ini"
 
 keys = [
 	"/php/date/timezone",
-	"/php/log_errors",
-	"/php/display_errors",
-	"/php/error_reporting",
-	"/php/post_max_size",
-	"/php/upload_max_filesize",
-	"/php/max_file_uploads"
+	"/php/log/errors",
+	"/php/display/errors",
+	"/php/error/reporting",
+	"/php/post/max_size",
+	"/php/upload/max/filesize",
+	"/php/max/file/uploads",
+	"/php/memory/limit",
+	"/php/max/execution/time",
+	"/php/max/input/time",
+	"/php/short/open/tag"
 ]

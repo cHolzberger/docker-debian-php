@@ -16,4 +16,4 @@ ScriptAlias /phpmyadmin /opt/phpmyadmin
 Alias /phpmyadmin /opt/phpmyadmin
 
 RemoteIPHeader X-Forwarded-For
-RemoteIPTrustedProxy 0.0.0.0/0
+RemoteIPTrustedProxy {{getv "/apache/trustedproxy" "60"}}

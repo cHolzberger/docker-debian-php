@@ -1,3 +1,11 @@
 root={{getv "/ssmtp/root"}}
 mailhub={{getv "/ssmtp/mailhub"}}
-FromLineOverride={{getv "/ssmtp/FromLineOverride"}}
+FromLineOverride={{getv "/ssmtp/fromlineoverride"}}
+hostname={{getv "/ssmtp/hostname"}}
+{{if exists "/ssmtp/authuser"}}
+AuthUser={{getv "/ssmtp/authuser"}}
+{{end}}
+
+{{if exists "/ssmtp/authpass"}}
+AuthPass={{getv "/ssmtp/authpass"}}
+{{end}}
