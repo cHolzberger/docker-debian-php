@@ -3,6 +3,6 @@ src = "apache-rpaf.conf.tmpl"
 dest = "/etc/apache2/conf-enabled/rpaf.conf"
 
 keys = [
-	"/apache/rpaf/proxyips"
+	"/apache/rpaf/proxyips",
 	"/apache/rpaf/header"
 ]
