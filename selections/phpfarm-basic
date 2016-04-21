@@ -2,6 +2,7 @@ apache2
 apache2-mpm-prefork
 libapache2-mod-rpaf
 git
+ghostscript
 build-essential
 wget
 pkg-config 
