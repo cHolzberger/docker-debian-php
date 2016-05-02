@@ -11,3 +11,7 @@ RPAFproxy_ips {{getv "/apache/rpaf/proxyips" "127.0.0.1 ::1"}}
     # Change the header name to parse from the default
     # X-Forwarded-For to something of your choice:
 		RPAFheader {{getv "/apache/rpaf/header" "X-Forwarded-For"}}
+
+RemoteIPHeader X-Real-IP
+RemoteIPInternalProxy  {{getv "/apache/rpaf/proxyips" "127.0.0.1 ::1"}}
+

@@ -78,3 +78,5 @@ libwrap0
 libxmltok1
 libxslt1.1
 mysql-common
+zip
+unzip
