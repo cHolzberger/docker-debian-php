@@ -31,10 +31,14 @@ RUN begin-apt && \
 		sed -e "s/error_log = syslog/error_log = \/var\/log\/php.log/g" -i /phpfarm/inst/php-*/lib/php.ini && \
 	 	touch /var/log/php.log && chmod a+rw /var/log/php.log && \
  		cp /phpfarm/inst/php-${PHP_VERSION}/lib/php.ini /etc/php/${PHP_VERSION}/ && \
+		ln -s /phpfarm/inst/php-${PHP_VERSION}/bin/* /bin && \
+		ln -s /phpfarm/inst/php-${PHP_VERSION}/sbin/* /sbin && \
+		ln -s /phpfarm/inst/php-${PHP_VERSION} /phpfarm/inst/current && \
+		ln -s /etc/php/${PHP_VERSION} /etc/php/current && \
  		rm -rf /var/www/* && \
 		a2enmod rewrite proxy proxy_fcgi remoteip && \
 		a2dissite 000-default && \
-	mkdir /etc/php/conf.d /etc/php/fpm.d
+		mkdir /etc/php/conf.d /etc/php/fpm.d 
 
 
 COPY var-www /var/www/
@@ -49,4 +53,4 @@ EXPOSE 80
 COPY run.sh /run.sh
 
 ENTRYPOINT [ "/bin/docker-entrypoint" ]
-CMD ["/run.sh"]
+CMD ["bash","/run.sh"]

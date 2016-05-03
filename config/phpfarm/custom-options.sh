@@ -10,8 +10,9 @@ mkdir -p "$etcbasedir"
 
 
 configoptions="$configoptions \
-		--with-config-file-path=$etcbasedir
-		--with-config-file-scan-dir=/etc/php/conf.d
+		--with-config-file-path=$etcbasedir \
+		--with-config-file-scan-dir=/etc/php/conf.d \
+		--enable-cli \
     --enable-fastcgi \
     --enable-fpm \
     --with-bz2 \

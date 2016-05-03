@@ -18,5 +18,5 @@ fi
 
 apache2ctl start
 
-/phpfarm/inst/php-$PHP_VERSION/sbin/php-fpm -c /etc/php/$PHP_VERSION -y /etc/php/$PHP_VERSION/php-fpm.conf
+/phpfarm/inst/current/sbin/php-fpm -c /etc/php/current -y /etc/php/current/php-fpm.conf
 tail -f /var/log/apache2/error.log

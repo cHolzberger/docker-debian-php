@@ -5,6 +5,17 @@ Removes systemd and udev and adds them to the ignore list.
 
 Does not install documentation of packages. 
 
+## Compile PHP
+You need to create a php tar using the following commands:
+```
+docker build -f ./Dockerfile-build-php  -t phpfarm-build .
+docker run --rm --name phpfarm -v `pwd`/pkg:/pkg phpfarm-build
+```
+afterwards you can build the debian-php container
+```
+docker build -t mosaiksoftware/php .
+```
+
 ## Selections
 
 This images provides an easy way to add packages to a derived image 
