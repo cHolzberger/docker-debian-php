@@ -1,0 +1,10 @@
+#!/bin/bash
+. /bin/envd-load
+
+SCRIPT=`realpath $0`
+SCRIPTPATH=`dirname $SCRIPT`
+
+
+echo "Running confd with Service Directory: $SCRIPTPATH"
+confd -onetime -backend env -confdir "$SCRIPTPATH"
+sleep 600

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+rm -rf /var/www/*
+a2enmod rewrite proxy proxy_fcgi remoteip
+a2dissite 000-default
+
+mkdir /etc/php/conf.d /etc/php/fpm.d
+touch /var/log/php.log && chmod a+rw /var/log/php.log

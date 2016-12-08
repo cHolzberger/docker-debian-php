@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set-selections apache
+set-selections php
+set-selections smtp
+set-selections wkhtmltopdf

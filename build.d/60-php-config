@@ -1,9 +1,0 @@
-#!/bin/bash 
-
-export PHP_VERSION=5.5.34
-
-sed -e "s/short_open_tag = Off/short_open_tag = On/g" -i /phpfarm/inst/php-*/lib/php.ini 
-sed -e "s/error_log = syslog/error_log = \/var\/log\/php.log/g" -i /phpfarm/inst/php-*/lib/php.ini 
-touch /var/log/php.log && chmod a+rw /var/log/php.log 
-cp /phpfarm/inst/php-${PHP_VERSION}/lib/php.ini /etc/php/${PHP_VERSION}/ 
-

@@ -1,0 +1,7 @@
+less
+apache2
+apache2-mpm-prefork
+libapache2-mod-rpaf
+libapache2-mod-fcgid
+zip
+unzip

@@ -1,6 +1,6 @@
 #/bin/sh
 
-confd -onetime -backend env 
+confd -onetime -backend env
 
 # is a certain UID wanted?
 if [ ! -z "$APACHE_UID" ]; then
