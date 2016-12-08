@@ -1,0 +1,28 @@
+#!/bin/bash
+
+
+export PHP_VERSION=5.5.34
+export PHPMYADMIN_VERSION=4.6.0
+export LDFLAGS="-lssl -lcrypto"
+
+export DEBIAN_FRONTEND=noninteractive
+echo "Installding php5 build-dep"
+apt-get build-dep -y php5 
+echo "Cloning PHPFarm"
+git clone --depth 1 https://github.com/cweiske/phpfarm.git /phpfarm 
+
+echo "Applying custom config"
+cp -r /etc/phpfarm/* /phpfarm/src
+cd /phpfarm/src
+
+echo "Compiling phpfarm"
+./compile.sh $PHP_VERSION
+
+echo "Creating symlinks"
+ln -s /phpfarm/inst/php-${PHP_VERSION}/bin/* /bin 
+ln -s /phpfarm/inst/php-${PHP_VERSION}/sbin/* /sbin 
+ln -s /phpfarm/inst/php-${PHP_VERSION} /phpfarm/inst/current 
+ln -s /etc/php/${PHP_VERSION} /etc/php/current 
+
+echo "Removing build dependencies"
+#apt-get remove \*-dev

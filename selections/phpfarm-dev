@@ -1,3 +1,4 @@
+build-essential
 libfreetype6-dev
 libbz2-dev
 libjpeg-dev
@@ -8,4 +9,5 @@ libmcrypt-dev
 libltdl-dev
 libmhash-dev
 libssl-dev
+libcurl4-openssl-dev
 graphicsmagick-libmagick-dev-compat

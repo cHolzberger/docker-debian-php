@@ -1,0 +1,7 @@
+#!/bin/bash 
+apt-get install -y ca-certificates 
+set-selections phpfarm-basic 
+set-selections phpfarm-dev 
+set-selections smtp 
+
+apply-apt
