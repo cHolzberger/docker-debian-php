@@ -1,0 +1,12 @@
+KeepAlive Off
+maxclients 250
+
+<IfModule mpm_*_module>
+  ServerLimit           100
+  StartServers          8
+  MinSpareThreads       25
+  MaxSpareThreads       75
+  ThreadsPerChild       25
+  MaxClients            200
+  MaxRequestsPerChild   1000
+</IfModule>

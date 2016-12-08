@@ -1,6 +1,6 @@
 less
 apache2
-apache2-mpm-prefork
+apache2-mpm-event
 libapache2-mod-rpaf
 libapache2-mod-fcgid
 zip

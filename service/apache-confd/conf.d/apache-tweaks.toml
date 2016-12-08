@@ -1,0 +1,8 @@
+[template]
+src = "apache-tweaks.conf.tmpl"
+dest = "/etc/apache2/conf-enabled/tweaks.conf"
+
+keys = [
+	"/apache/rpaf/proxyips",
+	"/apache/rpaf/header"
+]
