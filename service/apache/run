@@ -1,4 +1,4 @@
 #!/bin/bash
 
 sv start apache-confd || exit 1
-apache2ctl -D FOREGROUND 
+exec apache2ctl -D FOREGROUND 
