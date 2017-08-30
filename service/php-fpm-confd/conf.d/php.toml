@@ -1,6 +1,6 @@
 [template]
 src = "php-base.ini.tmpl"
-dest = "/etc/php5/fpm/conf.d/30-php-base.ini"
+dest = "/etc/php5/fpm/conf.d/30-base.ini"
 
 keys = [
 	"/php/date/timezone",
